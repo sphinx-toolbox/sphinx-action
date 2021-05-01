@@ -25,3 +25,7 @@ jobs:
         uses: satackey/push-prebuilt-action@v0.1
         with:
           push-branch: sphinx-3.3.1
+          docker-registry: docker.pkg.github.io
+          docker-repotag: docker.pkg.github.com/${{ github.repository }}/github-action-image:${{ github.sha }}
+          docker-user: x-access-token
+          docker-token: ${{ github.token }}
