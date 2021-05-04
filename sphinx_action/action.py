@@ -99,9 +99,7 @@ def build_docs(build_command, docs_directory):
     if not build_command:
         raise ValueError("Build command may not be empty")
 
-    docs_requirements = os.path.join(docs_directory, "requirements.txt")
-    if os.path.exists(docs_requirements):
-        subprocess.check_call(["pip", "install", "-r", docs_requirements])
+    subprocess.check_call(["pip", "install", "tox"])
 
     log_file = os.path.join(tempfile.gettempdir(), "sphinx-log")
     if os.path.exists(log_file):
