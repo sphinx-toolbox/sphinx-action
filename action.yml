@@ -1,27 +1,26 @@
-name: 'Sphinx Build'
-description: 'Builds documentation using Sphinx'
-author: 'Ammar Askar'
+name: Sphinx Build
+description: Builds documentation using Sphinx
+author: Ammar Askar
 branding:
-  icon: 'book'
-  color: 'yellow'
+  icon: book
+  color: yellow
 inputs:
   docs-folder:
-    description:
-      The folder containing your sphinx docs.
+    description: The folder containing your sphinx docs.
     required: true
-    default: "docs/"
+    default: docs/
   build-command:
-    description:
-      The command used to build your documentation.
+    description: The command used to build your documentation.
     required: false
     default: make html
   pre-build-command:
-    description:
+    description: >-
       Run before the build command, you can use this to install system level
-      dependencies, for example with
-      "apt-get update -y && apt-get install -y perl"
+      dependencies, for example with "apt-get update -y && apt-get install -y
+      perl"
     required: false
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: >-
+    docker://ghcr.io/sphinx-toolbox/sphinx-action:8cdfabd9a784bd951118eef6ee48abf8c2c18ef5
   env: {}
