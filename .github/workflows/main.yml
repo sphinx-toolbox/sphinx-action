@@ -23,7 +23,7 @@ jobs:
       - name: Build Docker image and push to GitHub Packages
         uses: sphinx-toolbox/push-prebuilt-action@release-st
         with:
-          push-branch: sphinx-3.3.1
+          push-branch: sphinx-3.3.1-py39
           docker-registry: ghcr.io
           docker-repotag: ghcr.io/${{ github.repository }}:${{ github.sha }}
           docker-user: x-access-token
