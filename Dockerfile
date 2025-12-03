@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.10-slim
 
 LABEL maintainer="Dominic Davis-Foster <dominic@davis-foster.co.uk>"
 
